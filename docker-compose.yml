@@ -8,7 +8,7 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: synergy
     ports:
-      - "3306:3306"
+      - "3307:3306"
     restart: always
 
   SynergyAir:
@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/synergy
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-synergy:3306/synergy
       SPRING_DATASOURCE_USERNAME: "root"
       SPRING_DATASOURCE_PASSWORD: "root"
     build:
